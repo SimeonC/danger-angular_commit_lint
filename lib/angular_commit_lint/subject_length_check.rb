@@ -6,7 +6,8 @@ module Danger
       def message
         'Please limit commit subject line to 50 characters.'.freeze
       end
-      GIT_GENERATED_SUBJECT = /^Merge ?(pull request #\d+ from\ |branch \'.+\' into\ )/
+      GIT_GENERATED_SUBJECT = /^Merge (pull request #\d+ from\ |\
+                                       branch \'.+\' into\ )/
 
       attr_reader :subject
 
